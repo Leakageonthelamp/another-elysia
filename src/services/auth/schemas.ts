@@ -1,4 +1,3 @@
-import { JWTPayloadSpec } from "@elysiajs/jwt"
 import { t } from "elysia"
 
 export const authSchema = t.Object({

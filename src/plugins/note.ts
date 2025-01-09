@@ -1,7 +1,7 @@
 import { Elysia, t } from "elysia"
 import { noteService } from "../services/note/note.service"
 import { createMemo, updateMemo } from "../services/note/schemas"
-import { auth, authMiddlewareService } from "./auth"
+import { authMiddlewareService } from "./auth"
 
 export const note = new Elysia({ prefix: "/note", name: "note.plugin" })
   .as("plugin")

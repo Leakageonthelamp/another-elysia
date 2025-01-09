@@ -1,7 +1,6 @@
-import type { JWTPayloadSpec } from "@elysiajs/jwt"
 import type { AuthSchema } from "../services/auth/schemas"
 import jwt from "@elysiajs/jwt"
-import { Elysia, t } from "elysia"
+import { Elysia } from "elysia"
 import { v4 as uuidv4 } from "uuid"
 import { config } from "../config"
 import { signKeyCreate, signKeyResponse } from "../services/auth/schemas"
