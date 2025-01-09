@@ -1,0 +1,33 @@
+{
+  "name": "another-elysia",
+  "type": "module",
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "start": "NODE_ENV=production bun run ./src/index.ts",
+    "lint": "bun x eslint \"src/**/*.ts\"",
+    "lint:fix": "bun x eslint \"src/**/*.ts\" --fix",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@bogeychan/elysia-logger": "^0.1.7",
+    "@elysiajs/cors": "^1.2.0",
+    "@elysiajs/jwt": "^1.2.0",
+    "@elysiajs/server-timing": "^1.2.0",
+    "@elysiajs/swagger": "^1.2.0",
+    "drizzle-orm": "^0.38.3",
+    "drizzle-typebox": "^0.2.1",
+    "elysia": "latest",
+    "env-var": "^7.5.0",
+    "pg": "^8.13.1",
+    "uuid": "^11.0.4"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.12.1",
+    "@types/bun": "^1.1.14",
+    "@types/pg": "^8.11.10",
+    "drizzle-kit": "^0.30.1",
+    "eslint": "^9.17.0",
+    "husky": "^9.1.7",
+    "typescript": "^5.7.2"
+  }
+}

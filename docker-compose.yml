@@ -1,0 +1,25 @@
+services:
+    bot:
+        container_name: another-elysia-bot
+        restart: unless-stopped
+        build:
+            context: .
+            dockerfile: Dockerfile
+        environment:
+        - NODE_ENV=production
+    postgres:
+            container_name: another-elysia-postgres
+            image: postgres:latest
+            restart: unless-stopped
+            environment:
+                - POSTGRES_USER=another-elysia
+                - POSTGRES_PASSWORD=Please-change-password
+                - POSTGRES_DB=another-elysia
+            volumes:
+                - postgres_data:/var/lib/postgresql/data
+    
+volumes:
+    postgres_data:
+    
+networks:
+    default: {}
